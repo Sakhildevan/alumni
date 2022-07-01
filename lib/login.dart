@@ -29,10 +29,9 @@ class _LoginWidgetState extends State<LoginWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Color.fromARGB(119, 25, 57, 99),
+      backgroundColor: Color.fromARGB(119, 25, 57, 99),
       key: scaffoldKey,
       body: SafeArea(
-        
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: ListView(
@@ -76,7 +75,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                   Align(
                     alignment: const AlignmentDirectional(0, 0),
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
                       child: Container(
                         width: 300,
                         height: 350,
@@ -116,14 +116,14 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         fontFamily: 'Poppins',
                                         color: Color(0xFF000509),
                                       ),
-                                      enabledBorder: OutlineInputBorder(
+                                      enabledBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Color(0xFF050E1A),
                                           width: 2,
                                         ),
                                         borderRadius: BorderRadius.circular(5),
                                       ),
-                                      focusedBorder: OutlineInputBorder(
+                                      focusedBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Color(0xFF050E1A),
                                           width: 2,
@@ -173,14 +173,14 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         fontFamily: 'Poppins',
                                         color: Color(0xFF000509),
                                       ),
-                                      enabledBorder: OutlineInputBorder(
+                                      enabledBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Color(0xFF050E1A),
                                           width: 2,
                                         ),
                                         borderRadius: BorderRadius.circular(5),
                                       ),
-                                      focusedBorder: OutlineInputBorder(
+                                      focusedBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Color(0xFF050E1A),
                                           width: 2,

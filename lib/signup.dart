@@ -113,7 +113,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                           fontFamily: 'Poppins',
                                           color: Color(0xFF000509),
                                         ),
-                                        enabledBorder: OutlineInputBorder(
+                                        enabledBorder: UnderlineInputBorder(
                                           borderSide: const BorderSide(
                                             color: Color(0xFF080F18),
                                             width: 1,
@@ -121,7 +121,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                           borderRadius:
                                               BorderRadius.circular(5),
                                         ),
-                                        focusedBorder: OutlineInputBorder(
+                                        focusedBorder: UnderlineInputBorder(
                                           borderSide: const BorderSide(
                                             color: Color(0xFF080F18),
                                             width: 1,
@@ -169,7 +169,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                           fontFamily: 'Poppins',
                                           color: Color(0xFF000509),
                                         ),
-                                        enabledBorder: OutlineInputBorder(
+                                        enabledBorder: UnderlineInputBorder(
                                           borderSide: const BorderSide(
                                             color: Color(0xFF080F18),
                                             width: 1,
@@ -177,7 +177,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                           borderRadius:
                                               BorderRadius.circular(5),
                                         ),
-                                        focusedBorder: OutlineInputBorder(
+                                        focusedBorder: UnderlineInputBorder(
                                           borderSide: BorderSide(
                                             color: Color(0xFF080F18),
                                             width: 1,
@@ -225,7 +225,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                           fontFamily: 'Poppins',
                                           color: Color(0xFF000509),
                                         ),
-                                        enabledBorder: OutlineInputBorder(
+                                        enabledBorder: UnderlineInputBorder(
                                           borderSide: BorderSide(
                                             color: Color(0xFF080F18),
                                             width: 1,
@@ -233,7 +233,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                           borderRadius:
                                               BorderRadius.circular(5),
                                         ),
-                                        focusedBorder: OutlineInputBorder(
+                                        focusedBorder: UnderlineInputBorder(
                                           borderSide: BorderSide(
                                             color: Color(0xFF080F18),
                                             width: 1,
@@ -280,7 +280,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                           fontFamily: 'Poppins',
                                           color: Color(0xFF000509),
                                         ),
-                                        enabledBorder: OutlineInputBorder(
+                                        enabledBorder: UnderlineInputBorder(
                                           borderSide: BorderSide(
                                             color: Color(0xFF080F18),
                                             width: 1,
@@ -288,7 +288,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                           borderRadius:
                                               BorderRadius.circular(5),
                                         ),
-                                        focusedBorder: OutlineInputBorder(
+                                        focusedBorder: UnderlineInputBorder(
                                           borderSide: BorderSide(
                                             color: Color(0xFF080F18),
                                             width: 1,
