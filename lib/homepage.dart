@@ -1,7 +1,9 @@
+import 'package:app/about.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'login.dart';
 import 'signup.dart';
 
@@ -99,7 +101,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           ),
                                         ),
                                       ),
-                                       Expanded(
+                                      Expanded(
                                         child: Align(
                                           alignment:
                                               AlignmentDirectional(-2, -0.2),
@@ -108,15 +110,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0, 0, 10, 0),
                                             child: InkWell(
-                                                 onTap: () async {
-                                                  await Navigator.push(
-                                                    context,
-                                                   MaterialPageRoute(
-                                                       builder: (context) =>
-                                                          SignupWidget(),
-                                                     ),
-                                                   );
-                                                 },
+                                              onTap: () async {
+                                                await Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        SignupWidget(),
+                                                  ),
+                                                );
+                                              },
                                               child: const Text(
                                                 'Signup',
                                                 style: TextStyle(
@@ -130,20 +132,20 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           ),
                                         ),
                                       ),
-                                       Expanded(
+                                      Expanded(
                                         child: Align(
                                           alignment:
                                               AlignmentDirectional(-2, -0.2),
                                           child: InkWell(
-                                               onTap: () async {
-                                               await Navigator.push(
-                                                   context,
-                                                   MaterialPageRoute(
-                                                   builder: (context) =>
-                                                         SignupWidget(),
-                                                   ),
-                                                 );
-                                               },
+                                            onTap: () async {
+                                              await Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      AboutWidget(),
+                                                ),
+                                              );
+                                            },
                                             child: const Text(
                                               'About',
                                               style: TextStyle(
@@ -174,20 +176,34 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Align(
-                              alignment: AlignmentDirectional(-0.05, 0.3),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
-                                child: AutoSizeText(
-                                  'RE-connect',
-                                  style: GoogleFonts.getFont(
-                                    'Mogra',
-                                    color: Color(0xFF3F51B5),
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 65,
+                            Expanded(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset(
+                                    'assets/images/R.png',
+                                    width: 130,
+                                    height: 130,
+                                    fit: BoxFit.cover,
                                   ),
-                                ),
+                                  Align(
+                                    alignment: AlignmentDirectional(-0.05, 0.5),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          10, 0, 10, 0),
+                                      child: AutoSizeText(
+                                        'RE-connect',
+                                        style: GoogleFonts.getFont(
+                                          'Mogra',
+                                          color: Color(0xFF3F51B5),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 50,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ],
@@ -196,29 +212,44 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                     Expanded(
                       child: Align(
-                        alignment: const AlignmentDirectional(0.2, 2.5),
+                        alignment: AlignmentDirectional(0.2, 2.5),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Image.asset(
-                              'assets/images/amrita_cyber.png',
-                              width: 100,
-                              height: 100,
-                              fit: BoxFit.contain,
+                            InkWell(
+                              onTap: () async {
+                                await _launchURLas();
+                              },
+                              child: Image.asset(
+                                'assets/images/amrita_cyber.png',
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.contain,
+                              ),
                             ),
-                            Image.asset(
-                              'assets/images/amritapuri_dark.png',
-                              width: 100,
-                              height: 100,
-                              fit: BoxFit.contain,
+                            InkWell(
+                              onTap: () async {
+                                _launchURLam();
+                              },
+                              child: Image.asset(
+                                'assets/images/amritapuri_dark.png',
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.contain,
+                              ),
                             ),
-                            Image.asset(
-                              'assets/images/bi0s_dark.png',
-                              width: 100,
-                              height: 100,
-                              fit: BoxFit.contain,
+                            InkWell(
+                              onTap: () async {
+                                await _launchURLb();
+                              },
+                              child: Image.asset(
+                                'assets/images/bi0s_dark.png',
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.contain,
+                              ),
                             ),
                           ],
                         ),
@@ -273,5 +304,33 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         ),
       ),
     );
+  }
+
+  _launchURLas() async {
+    const url =
+        'https://www.amrita.edu/thematic-area/amrita-center-for-cybersecurity-systems-and-networks/';
+    if (!await canLaunch(url)) {
+      await launch(url, forceSafariVC: true, forceWebView: true);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURLam() async {
+    const url = 'https://www.amrita.edu/';
+    if (!await canLaunch(url)) {
+      await launch(url, forceSafariVC: true, forceWebView: true);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _launchURLb() async {
+    const url = 'https://bi0s.in/';
+    if (!await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

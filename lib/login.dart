@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'event.dart';
 import 'signup.dart';
+import 'homepage.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -59,13 +60,23 @@ class _LoginWidgetState extends State<LoginWidget> {
                             AlignmentDirectional(-0.19999999999999996, 0.5),
                         child: Align(
                           alignment: AlignmentDirectional(-0.05, 0),
-                          child: Text(
-                            'RE-connect',
-                            style: GoogleFonts.getFont(
-                              'Mogra',
-                              color: Color(0xFF1565C0),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 50,
+                          child: InkWell(
+                            onTap: () async {
+                              await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => HomePageWidget(),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'RE-connect',
+                              style: GoogleFonts.getFont(
+                                'Mogra',
+                                color: Color(0xFF1565C0),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 50,
+                              ),
                             ),
                           ),
                         ),

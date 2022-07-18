@@ -115,7 +115,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                                   -0.45, -0.35),
                                               child: Padding(
                                                 padding: EdgeInsetsDirectional
-                                                    .fromSTEB(25, 20, 10, 0),
+                                                    .fromSTEB(50, 20, 50, 0),
                                                 child: TextFormField(
                                                   controller: textController1,
                                                   onChanged: (_) =>
@@ -208,7 +208,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                                   AlignmentDirectional(0, 0.45),
                                               child: Padding(
                                                 padding: EdgeInsetsDirectional
-                                                    .fromSTEB(25, 20, 10, 0),
+                                                    .fromSTEB(50, 20, 50, 0),
                                                 child: TextFormField(
                                                   controller: textController2,
                                                   onChanged: (_) =>
@@ -298,7 +298,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                                   -0.7, -0.1),
                                               child: Padding(
                                                 padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(25, 20, 10, 0),
+                                                    .fromSTEB(50, 20, 50, 0),
                                                 child: TextFormField(
                                                   controller: textController3,
                                                   onChanged: (_) =>
@@ -388,7 +388,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                                   -0.7, -0.1),
                                               child: Padding(
                                                 padding: EdgeInsetsDirectional
-                                                    .fromSTEB(25, 20, 10, 0),
+                                                    .fromSTEB(50, 20, 50, 0),
                                                 child: TextFormField(
                                                   controller: textController4,
                                                   onChanged: (_) =>
