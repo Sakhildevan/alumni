@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AboutWidget extends StatefulWidget {
-  const AboutWidget({Key key}) : super(key: key);
+  const AboutWidget({Key? key}) : super(key: key);
 
   @override
   _AboutWidgetState createState() => _AboutWidgetState();

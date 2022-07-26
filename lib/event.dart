@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'register.dart';
 
 class EventWidget extends StatefulWidget {
-  const EventWidget({Key key}) : super(key: key);
+  const EventWidget({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _EventWidgetState createState() => _EventWidgetState();
 }
 

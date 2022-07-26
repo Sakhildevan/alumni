@@ -8,7 +8,7 @@ import 'login.dart';
 import 'signup.dart';
 
 class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key key}) : super(key: key);
+  const HomePageWidget({Key? key}) : super(key: key);
 
   @override
   _HomePageWidgetState createState() => _HomePageWidgetState();
@@ -115,7 +115,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   context,
                                                   MaterialPageRoute(
                                                     builder: (context) =>
-                                                        SignupWidget(),
+                                                        signup(),
                                                   ),
                                                 );
                                               },

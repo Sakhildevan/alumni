@@ -1,4 +1,4 @@
-import 'dart:ui';
+
 import 'event.dart';
 import 'signup.dart';
 import 'homepage.dart';
@@ -7,23 +7,25 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginWidget extends StatefulWidget {
-  const LoginWidget({Key key}) : super(key: key);
+  const LoginWidget({Key? key}) : super(key: key);
 
   @override
-  _LoginWidgetState createState() => _LoginWidgetState();
+  // ignore: library_private_types_in_public_api
+  @override
+  State<LoginWidget> createState() => _LoginWidgetState();
 }
 
 class _LoginWidgetState extends State<LoginWidget> {
-  TextEditingController textController1;
-  TextEditingController textController2;
-  bool passwordVisibility;
+  late TextEditingController email;
+  late TextEditingController password;
+  late bool passwordVisibility;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    textController1 = TextEditingController();
-    textController2 = TextEditingController();
+    email = TextEditingController();
+    password = TextEditingController();
     passwordVisibility = false;
   }
 
@@ -113,7 +115,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       10, 0, 10, 0),
                                   child: TextFormField(
-                                    controller: textController1,
+                                    controller: email,
                                     onChanged: (_) => EasyDebounce.debounce(
                                       'textController1',
                                       Duration(milliseconds: 10),
@@ -141,11 +143,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         ),
                                         borderRadius: BorderRadius.circular(5),
                                       ),
-                                      suffixIcon: textController1
+                                      suffixIcon: email
                                               .text.isNotEmpty
                                           ? InkWell(
                                               onTap: () => setState(
-                                                () => textController1?.clear(),
+                                                () => email.clear(),
                                               ),
                                               child: Icon(
                                                 Icons.clear,
@@ -171,7 +173,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       10, 0, 10, 0),
                                   child: TextFormField(
-                                    controller: textController2,
+                                    controller: password,
                                     onChanged: (_) => EasyDebounce.debounce(
                                       'textController2',
                                       Duration(milliseconds: 1000),
@@ -273,7 +275,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    SignupWidget(),
+                                                    signup(),
                                               ),
                                             );
                                           },

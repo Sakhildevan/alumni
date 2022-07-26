@@ -4,18 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RegistrationWidget extends StatefulWidget {
-  const RegistrationWidget({Key key}) : super(key: key);
+  const RegistrationWidget({Key? key}) : super(key: key);
 
   @override
   _RegistrationWidgetState createState() => _RegistrationWidgetState();
 }
 
 class _RegistrationWidgetState extends State<RegistrationWidget> {
-  String radioButtonValue;
-  TextEditingController textController1;
-  TextEditingController textController2;
-  TextEditingController textController3;
-  TextEditingController textController4;
+  late String radioButtonValue;
+  late TextEditingController textController1;
+  late TextEditingController textController2;
+  late TextEditingController textController3;
+  late TextEditingController textController4;
   final formKey = GlobalKey<FormState>();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
